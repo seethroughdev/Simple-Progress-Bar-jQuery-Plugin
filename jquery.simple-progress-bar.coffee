@@ -19,9 +19,11 @@ $ ->
 
 		@.each (options) ->
 
+			$this = $(this)
+
 			# Get direction and bar length from attribute
 			$direction = defaults.direction
-			$innerLength = $(this).attr("data-bar-length") or defaults.innerLength
+			$innerLength = $this.attr("data-bar-length") or defaults.innerLength
 
 			# Set width or height
 			if $direction is 'horizontal'
@@ -46,4 +48,4 @@ $ ->
 			$innerBar = $(this).append('<div class="innerbar"></div>')
 
 			# perform bar animation
-			$(this).children('.innerbar').css($directionStyle, '0px').animate(animArg, 'slow')
+			$this.children('.innerbar').css($directionStyle, '0px').animate(animArg, 'slow')

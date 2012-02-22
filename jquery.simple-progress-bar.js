@@ -14,9 +14,10 @@ $(function() {
     };
     options = $.extend(defaults, options);
     return this.each(function(options) {
-      var $direction, $directionStyle, $innerBar, $innerLength, $newLength, $outerLength, animArg, animDirection;
+      var $direction, $directionStyle, $innerBar, $innerLength, $newLength, $outerLength, $this, animArg, animDirection;
+      $this = $(this);
       $direction = defaults.direction;
-      $innerLength = $(this).attr("data-bar-length") || defaults.innerLength;
+      $innerLength = $this.attr("data-bar-length") || defaults.innerLength;
       if ($direction === 'horizontal') {
         $outerLength = $(this).width();
         $directionStyle = 'width';
@@ -30,7 +31,7 @@ $(function() {
       animArg = {};
       animArg[animDirection] = $newLength + 'px';
       $innerBar = $(this).append('<div class="innerbar"></div>');
-      return $(this).children('.innerbar').css($directionStyle, '0px').animate(animArg, 'slow');
+      return $this.children('.innerbar').css($directionStyle, '0px').animate(animArg, 'slow');
     });
   };
 });
