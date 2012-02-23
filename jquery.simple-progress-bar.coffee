@@ -3,22 +3,26 @@ Title: Simple Progress bar
 Desc: Re-usable animated bar plugin
 Created: 01.12
 Updated: 01.27.12
+Version 0.91
+
+Compiled with CoffeeScript, use original for detailed comments
 ###
 $ ->
 
-	$.fn.wedgeBar = (options) ->
+	$.fn.simpleProgressBar = (options) ->
 
 		# Set plugin defaults
 		defaults =
-			direction	: 'horizontal'
-			innerLength	: 50,
-			outerLength : 100
+			direction		: 'horizontal'
+			innerLength		: 0,
+			outerLength 	: 100
 
 		# Tell jQuery to use defaults if options are empty
 		options = $.extend(defaults, options)
 
 		@.each (options) ->
 
+			# cached $(this) for efficiency
 			$this = $(this)
 
 			# Get direction and bar length from attribute
@@ -39,7 +43,7 @@ $ ->
 			# Get total bar length
 			$newLength = $innerLength * $outerLength
 
-			# force jQuery to allow variables to animage
+			# force jQuery to allow variables to animate
 			animDirection = $directionStyle
 			animArg = {}
 			animArg[animDirection] = $newLength + 'px'

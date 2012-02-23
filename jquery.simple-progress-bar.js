@@ -3,13 +3,16 @@ Title: Simple Progress bar
 Desc: Re-usable animated bar plugin
 Created: 01.12
 Updated: 01.27.12
+Version 0.91
+
+Compiled with CoffeeScript, use original for detailed comments
 */
 $(function() {
-  return $.fn.wedgeBar = function(options) {
+  return $.fn.simpleProgressBar = function(options) {
     var defaults;
     defaults = {
       direction: 'horizontal',
-      innerLength: 50,
+      innerLength: 0,
       outerLength: 100
     };
     options = $.extend(defaults, options);
