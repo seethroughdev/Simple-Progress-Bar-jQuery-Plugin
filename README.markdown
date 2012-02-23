@@ -48,18 +48,22 @@ The CSS is also straight forward:
 
 ##### Javascript
 First you must require jQuery.
-```javascript
+
+```js
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 ```
+
 Then add the call to the plugin:
-```javascript
+
+```js
 $(document).ready(function() {
 	$('.my-progress-bar').simpleProgressBar();
 });
 ```
 
 The plugin defaults to horizontal, but you can also make it vertical by passing in the option:
-```javascript
+
+```js
 $(document).ready(function() {
 	$('.my-progress-bar').simpleProgressBar({
 		direction: 'vertical'
