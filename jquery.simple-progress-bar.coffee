@@ -15,7 +15,7 @@ $ ->
 		defaults =
 			direction		: 'horizontal'
 			innerLength		: 0
-			outerLength 	: 100
+			outerLength		: 100
 
 		# Tell jQuery to use defaults if options are empty
 		options = $.extend(defaults, options)
