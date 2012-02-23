@@ -1,6 +1,5 @@
 ## Simple Progress Bar Plugin for jQuery
 
-#### Disclaimer
 
 I created this plugin to practice creating jQuery plugins using Coffee Script.
 
@@ -11,6 +10,8 @@ That said, this is currently used on a high traffic production environment. And 
 Its a simple bar plugin that takes a number between 0-100 and creates an animated bar that grows to the required length.
 
 It has an option for vertical or horizontal.
+
+---
 
 #### Usage
 
