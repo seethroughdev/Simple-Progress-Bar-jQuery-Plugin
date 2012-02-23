@@ -33,7 +33,7 @@ $(function() {
       animDirection = $directionStyle;
       animArg = {};
       animArg[animDirection] = $newLength + 'px';
-      $innerBar = $(this).append('<div class="innerbar"></div>');
+      $innerBar = $this.append('<div class="innerbar"></div>');
       return $this.children('.innerbar').css($directionStyle, '0px').animate(animArg, 'slow');
     });
   };

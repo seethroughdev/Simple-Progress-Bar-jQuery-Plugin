@@ -49,7 +49,7 @@ $ ->
 			animArg[animDirection] = $newLength + 'px'
 
 			# insert inner div
-			$innerBar = $(this).append('<div class="innerbar"></div>')
+			$innerBar = $this.append('<div class="innerbar"></div>')
 
 			# perform bar animation
 			$this.children('.innerbar').css($directionStyle, '0px').animate(animArg, 'slow')
