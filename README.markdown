@@ -16,7 +16,9 @@ It has an option for vertical or horizontal.
 
 ##### HTML
 
-`<div class="my-progress-bar" data-bar-length="10"></div>`
+```html
+<div class="my-progress-bar" data-bar-length="10"></div>
+```
 
 Where the data-bar-length value would the relative length.
 
@@ -26,7 +28,7 @@ This is best used in dynamic situations.
 
 The CSS is also straight forward:
 
-`
+```css
 .my-progress-bar{
 	overflow: hidden;
 	display: inline-block;
@@ -41,4 +43,4 @@ The CSS is also straight forward:
 	background:#ffff01;			/* Set background color or image of current bar */
 }
 
-`
+```
