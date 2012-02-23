@@ -14,7 +14,7 @@ $ ->
 		# Set plugin defaults
 		defaults =
 			direction		: 'horizontal'
-			innerLength		: 0,
+			innerLength		: 0
 			outerLength 	: 100
 
 		# Tell jQuery to use defaults if options are empty

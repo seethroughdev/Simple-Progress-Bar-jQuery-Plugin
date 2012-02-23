@@ -32,15 +32,41 @@ The CSS is also straight forward:
 .my-progress-bar{
 	overflow: hidden;
 	display: inline-block;
-	height: 15px; 				/* Set height of bar */
+	height: 30px; 				/* Set height of bar */
 	background: white;			/* Set background color or image */
 	width: 260px;				/* Set width of bar */
 }
 
 .my-progress-bar div{
 	float:left;
-	height:15px;				/* For a horizontal bar, set fixed height, for vertical bar, set fixed width */
+	height:30px;				/* For a horizontal bar, set fixed height, for vertical bar, set fixed width */
 	background:#ffff01;			/* Set background color or image of current bar */
 }
 
+/* .my-progress-bar div is a great place to add css3 effects */
 ```
+
+##### Javascript
+First you must require jQuery.
+```javascript
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+```
+Then add the call to the plugin:
+```javascript
+$(document).ready(function() {
+	$('.my-progress-bar').simpleProgressBar();
+});
+```
+
+The plugin defaults to horizontal, but you can also make it vertical by passing in the option:
+```javascript
+$(document).ready(function() {
+	$('.my-progress-bar').simpleProgressBar({
+		direction: 'vertical'
+	});
+});
+```
+
+---
+
+That's about it!  If you have any questions, don't hesitate to post an issue or contact me.
